@@ -21,7 +21,7 @@ describe ("List Component Suite", ()=>{
 
         it('rendrs UI as expexted', ()=>{
             const tree = renderer
-            .create(<List props ={this.STORE}/>)
+            .create(<List store ={STORE}/>)
             .toJSON()
             expect(tree).toMatchSnapShot();
 
