@@ -1,19 +1,20 @@
-import React from "react"
-import './Card.css'
+import React from "react";
+import "./Card.css";
 
-function Card(props){
+function Card(props) {
+  return (
+    <div className="Card">
+      <button
+        type="button"
+        onClick={() => props.handleDeleteCard(props.listId, props.id)}
+      >
+        delete
+      </button>
 
-return (
-
-<div className="Card">
-<button type="button">delete</button>
-  
-<h3>{props.title}</h3>
-<p>{props.content}</p>
-</div>
-)
-
+      <h3>{props.title}</h3>
+      <p>{props.content}</p>
+    </div>
+  );
 }
 
-
-export default Card
+export default Card;
