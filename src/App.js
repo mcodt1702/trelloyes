@@ -20,8 +20,8 @@ class App extends Component {
 
 
 
-  addRandomCard = (id) => {
-    const newRandomCard = () => {
+  
+    newRandomCard = () => {
       const id = Math.random().toString(36).substring(2, 4)
         + Math.random().toString(36).substring(2, 4);
       return {
@@ -29,9 +29,9 @@ class App extends Component {
         title: `Random Card ${id}`,
         content: 'lorem ipsum',
       }
-    }
+    
 
-    this.setState({store:})
+ 
 
 
   }
@@ -51,7 +51,7 @@ class App extends Component {
               id={list.id}
               cards={list.cardIds.map((id) => allCards[id])}
               handleDeleteCard={this.handleDeleteCard}
-              addRandomCard={this.addRandomCard}
+              newRandomCard={this.newRandomCard}
             />
           ))}
         </div>
